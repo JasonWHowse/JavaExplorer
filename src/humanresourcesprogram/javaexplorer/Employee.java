@@ -15,49 +15,49 @@ public class Employee {
     private double salary;
 
 
-    Employee(int ID){
+    Employee(int ID){                                                           //Constructor w/ employeeID
         this.ID=ID;
-    }
+    }//Employee(int ID){
 
-    Employee(int ID,String name){
-        this.ID=ID;
-        this.name=name;
-    }
-
-    Employee(int ID,String name,double salary){
+    Employee(int ID,String name){                                               //Constructor w/ employeeID and name
         this.ID=ID;
         this.name=name;
-        this.salary=salary;
-    }
+    }//Employee(int ID,String name){
 
-    Employee(String name,int ID,double salary){
+    Employee(int ID,String name,double salary){                                 //Constructor w/ employeeID, name, salary
         this.ID=ID;
         this.name=name;
         this.salary=salary;
-    }
+    }//Employee(int ID,String name,double salary){
 
-    public int getID(){
-        return ID;
-    }
-
-    public void setName(String name){
+    Employee(String name,int ID,double salary){                                 //Constructor w/ employeeID, name, salary
+        this.ID=ID;                                                             //same as above but different order
         this.name=name;
-    }
+        this.salary=salary;
+    }//Employee(String name,int ID,double salary){
 
-    public String getName(){
+    public int getID(){                                                         //gets employee ID
+        return ID;                                                              //no set method because it must added with constructor
+    }//public int getID(){
+
+    public void setName(String name){                                           //sets employee name
+        this.name=name;
+    }//public void setName(String name){
+
+    public String getName(){                                                    //gets employee name
         return name;
-    }
+    }//public String getName(){
 
-    public void setSalary(double salary){
+    public void setSalary(double salary){                                       //sets the employee salary
         this.salary=salary;
-    }
+    }//public void setSalary(double salary){
 
-    public double getSalary(){
+    public double getSalary(){                                                  //gets the employee salary
         return salary;
-    }
+    }//public double getSalary(){
 
-    public String toString(){
+    @Override
+    public String toString(){                                                   //override for outputting employee info
         return "ID: "+ID+" Name: "+name+" Salary: "+salary;
-    }
-
-}
+    }//public String toString(){
+}//public class Employee {
