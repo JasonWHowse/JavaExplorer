@@ -9,7 +9,7 @@ package duke.choice;
  *
  * @author opc
  */
-public class Clothing {
+public class Clothing implements Comparable<Clothing> {
     private String description;
     private String size="M";
     private double price;
@@ -38,6 +38,7 @@ public class Clothing {
         this.price= (price>minimumPrice)?price:minimumPrice;
     }//Clothing(String description,double price){
 
+
     public String getDescription() {
         return description;
     }//public String getDescription() {
@@ -61,4 +62,15 @@ public class Clothing {
     public void setPrice(double price) {
         this.price= (price>minimumPrice)?price:minimumPrice;
     }//public void setPrice(double price) {
-}//public class Clothing {
+
+    @Override
+    public String toString(){
+        return description+","+size+","+price;
+    }//public String toString(){
+
+    @Override
+    public int compareTo(Clothing o) {
+        return this.description.compareTo(o.getDescription());
+    }//public int compareTo(Clothing o) {
+
+}//public class Clothing implements Comparable<Clothing> {
